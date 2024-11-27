@@ -72,6 +72,20 @@ qwewqeas
 
 
 ## Troubleshooting
-螢幕pixel random initialization
+### 螢幕pixel random initialization
+
+### ESP-IDF Monitor
+Error loop about [I2C Read Failed (IDFGH-11933) #13013](https://github.com/espressif/esp-idf/issues/13013)
+```
+Loop{
+    E (5274) CST816S: read_data(108): I2C read failed
+    E (5306) lcd_panel.io.i2c: panel_io_i2c_rx_buffer(135): i2c transaction failed
+}
+```
+
+
+
+
+
 
 
