@@ -43,7 +43,8 @@ Ensure that your `sdkconfig` has the necessary I2C drivers enabled.
 
 
 **Install Library provided by ESpressif:**
-- LVGL 
+- LVGL - Light and Versatile Graphics Library
+    - ESP-IDF Terminal: ```idf.py add-dependency "lvgl/lvgl^8.3.11"```
 
 - [ESP LCD Touch CST816S Controller](https://components.espressif.com/components/espressif/esp_lcd_touch_cst816s)
     - ESP-IDF Terminal: ```idf.py add-dependency "espressif/esp_lcd_touch_cst816s^1.0.3~1"```
@@ -58,9 +59,12 @@ Ensure that your `sdkconfig` has the necessary I2C drivers enabled.
 - [Arduino as an ESP-IDF component](https://docs.espressif.com/projects/arduino-esp32/en/latest/esp-idf_component.html)
     - After build a IDF project and open it
     - Press "F1" on VScode, then choose ```Add Arduino ESP32 as ESP-IDF Component```
-    - Modify sdkconfig: ```~~CONFIG_FREERTOS_HZ=1000~~``` to ```CONFIG_FREERTOS_HZ=1000```
+    - Modify sdkconfig: ~~CONFIG_FREERTOS_HZ=1000~~ to ```CONFIG_FREERTOS_HZ=1000```
+      
 - Adafruit_ADS1X15
+  
 - Adafruit_TCS34725
+  
 **Note:** Your ESP-IDF version is limited in >=5.1 and <=5.2
 
 
@@ -93,6 +97,13 @@ Loop{
 ```
 
 
+
+
+
+## 還未整理
+https://www.cnblogs.com/yinsua/p/18202710
+
+https://github.com/espressif/esp-bsp/tree/master/components/lcd_touch/esp_lcd_touch_cst816s
 
 
 
