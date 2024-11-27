@@ -1,4 +1,4 @@
-# B-Watch Eusing ESP-IDF
+# B-Watch using ESP-IDF
 
 This project demonstrates how to interface the CST816S capacitive touch controller on GC9A01 TFT-LCD with ESP-S3 using the ESP-IDF framework.
 並用於開發檢測滲血傷口感測器Blood Moonitor Watch
@@ -33,7 +33,7 @@ _Sofrware_
 | **Touch INT**       | GPIO 13           | -            | INT          |
 | **Touch RST**       | GPIO 5            | -            | RST          |
 
-**Note:** Some GPIOs are not corrected from Wareshare's website....
+**Note:** Some GPIOs are not corrected from Waveshare's website....
 
 ## Software Configuration
 Ensure that your `sdkconfig` has the necessary I2C drivers enabled.
