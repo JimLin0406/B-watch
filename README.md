@@ -62,11 +62,13 @@ all the needed arduino library
 
 ## Code Overview
 ### I2C Initialization
+123test
 
 ### SPI Initialization
+asdtwst
 
 ### LVGL Touch Integration
-
+qwewqeas
 
 
 
