@@ -1,7 +1,7 @@
 # B-Watch using ESP-IDF
 
 This project demonstrates how to interface the CST816S capacitive touch controller on GC9A01 TFT-LCD with ESP-S3 using the ESP-IDF framework.
-並用於開發檢測滲血傷口感測器Blood Moonitor Watch
+並用於開發檢測滲血傷口感測器Blood Monitor Watch
 
 ## Requirements
 _Hardware_
@@ -24,26 +24,35 @@ _Sofrware_
 |---------------------|--------------------|--------------|--------------|
 | **LCD SDA**         | GPIO 21           | SDA          | -            |
 | **LCD SCL**         | GPIO 22           | SCL          | -            |
-| **Touch SDA**       | GPIO 18           | -            | SDA          |
-| **Touch SCL**       | GPIO 19           | -            | SCL          |
 | **LCD Reset (RST)** | GPIO 15           | RESET        | -            |
 | **LCD DC**          | GPIO 2            | DC           | -            |
 | **LCD CS**          | GPIO 5            | CS           | -            |
 | **LCD BL**          | GPIO 4            | BL           | -            |
 | **Touch INT**       | GPIO 13           | -            | INT          |
 | **Touch RST**       | GPIO 5            | -            | RST          |
+| **Touch SDA**       | GPIO 18           | -            | SDA          |
+| **Touch SCL**       | GPIO 19           | -            | SCL          |
 
 **Note:** Some GPIOs are not corrected from Waveshare's website....
 
 ## Software Configuration
 Ensure that your `sdkconfig` has the necessary I2C drivers enabled.
 
-1. **Enable I2C in ESP-IDF:**
+- **Install ESP-IDF on VScode IDE**
 
 
+- **Install Library provided by ESpressif:**
+1. LVGL 
 
-2. **Install LVGL (if not already integrated):**
-Follow LVGL integration steps via [LVGL ESP-IDF docs](https://docs.lvgl.io/latest/en/html/get-started/esp32.html).
+2. GC9a01
+
+3. CST816S
+
+- **Install other Library:**
+all the needed arduino library
+**Note:** Your ESP-IDF version is limited in >=5.1 and <=5.2
+
+
 
 ## Project Structure
 
