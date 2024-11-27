@@ -4,7 +4,7 @@ This project demonstrates how to interface the CST816S capacitive touch controll
 並用於開發檢測滲血傷口感測器Blood Monitor Watch
 
 ## Requirements
-_Hardware_
+### Hardware
 - [ESP32-S3 LCD ESP32-S3-Touch-LCD-1.28](https://www.waveshare.com/esp32-s3-touch-lcd-1.28.htm)
     - ESP32-S3 development board
     - GC9A01 TFT-LCD 
@@ -12,7 +12,7 @@ _Hardware_
 - Sensor PCB (from NCKU WTMH LAB)
     - PCB材料清單
     - 
-_Sofrware_
+### Sofrware
 - VS code IDE
 - ESP32-IDF (version 5.15.5)
 - LVGL library
@@ -70,5 +70,8 @@ asdtwst
 ### LVGL Touch Integration
 qwewqeas
 
+
+## Troubleshooting
+螢幕pixel random initialization
 
 
