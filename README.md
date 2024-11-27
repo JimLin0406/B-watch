@@ -58,6 +58,7 @@ Ensure that your `sdkconfig` has the necessary I2C drivers enabled.
 - [Arduino as an ESP-IDF component](https://docs.espressif.com/projects/arduino-esp32/en/latest/esp-idf_component.html)
     - After build a IDF project and open it
     - Press "F1" on VScode, then choose ```Add Arduino ESP32 as ESP-IDF Component```
+    - Modify sdkconfig: ```~~CONFIG_FREERTOS_HZ=1000~~``` to ```CONFIG_FREERTOS_HZ=1000```
 - Adafruit_ADS1X15
 - Adafruit_TCS34725
 **Note:** Your ESP-IDF version is limited in >=5.1 and <=5.2
