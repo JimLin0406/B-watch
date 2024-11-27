@@ -38,20 +38,23 @@ This project demonstrates how to interface the CST816S capacitive touch controll
 ## Software Configuration
 Ensure that your `sdkconfig` has the necessary I2C drivers enabled.
 
-- **Install ESP-IDF on VScode IDE**
+**Install ESP-IDF on VScode IDE**
+[ESP-IDF Extension for VS Code](https://github.com/espressif/vscode-esp-idf-extension)
 
 
-- **Install Library provided by ESpressif:**
-1. LVGL 
+**Install Library provided by ESpressif:**
+- LVGL 
 
-2. GC9a01
+- GC9a01
 
-3. CST816S
+- CST816S
 
-- **Install other Library:**
-- 
-all the needed arduino library
-
+**Install other Library:**
+- [Arduino as an ESP-IDF component](https://docs.espressif.com/projects/arduino-esp32/en/latest/esp-idf_component.html)
+    - After build a IDF project and open it
+    - Press "F1" on VScode, then choose ```Add Arduino ESP32 as ESP-IDF Component```
+- Adafruit_ADS1X15
+- Adafruit_TCS34725
 **Note:** Your ESP-IDF version is limited in >=5.1 and <=5.2
 
 
