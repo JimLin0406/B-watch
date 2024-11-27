@@ -62,8 +62,31 @@ Ensure that your `sdkconfig` has the necessary I2C drivers enabled.
     - Modify sdkconfig: ~~CONFIG_FREERTOS_HZ=1000~~ to ```CONFIG_FREERTOS_HZ=1000```
       
 - Adafruit_ADS1X15
+    - Copy library to /esp-project/components
+    - Add CMakeList.txt in /esp-project/components/
+```
+/* CMakeList.txt */
+idf_component_register(SRCS "Adafruit_ADS1X15.cpp"
+                      INCLUDE_DIRS "."
+                      REQUIRES arduino Adafruit_BusIO
+                      )
+```
   
 - Adafruit_TCS34725
+    - same as above
+
+- Adafruit_BusIO
+    - same as above
+    - 
+**Partition Scheme**
+- Open SDK Configuration Editor (menuconfig)
+- Chooese **Partition Table** and import partition.csv in the path of main project
+- Check sdkconfig as same as below:
+```
+CONFIG_PARTITION_TABLE_CUSTOM=y
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="partitions.csv"
+```
+
   
 **Note:** Your ESP-IDF version is limited in >=5.1 and <=5.2
 
