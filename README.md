@@ -49,12 +49,24 @@ Ensure that your `sdkconfig` has the necessary I2C drivers enabled.
 3. CST816S
 
 - **Install other Library:**
+- 
 all the needed arduino library
+
 **Note:** Your ESP-IDF version is limited in >=5.1 and <=5.2
 
 
 
 ## Project Structure
+
+
+
+## Code Overview
+### I2C Initialization
+
+### SPI Initialization
+
+### LVGL Touch Integration
+
 
 
 
