@@ -43,7 +43,7 @@ Ensure that your `sdkconfig` has the necessary I2C drivers enabled.
 
 
 **Install Library provided by ESpressif:**
-- LVGL - Light and Versatile Graphics Library
+- [LVGL - Light and Versatile Graphics Library](https://components.espressif.com/components/lvgl/lvgl/versions/8.3.11?language=en)
     - ESP-IDF Terminal: ```idf.py add-dependency "lvgl/lvgl^8.3.11"```
 
 - [ESP LCD Touch CST816S Controller](https://components.espressif.com/components/espressif/esp_lcd_touch_cst816s)
