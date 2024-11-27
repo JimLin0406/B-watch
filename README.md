@@ -45,9 +45,14 @@ Ensure that your `sdkconfig` has the necessary I2C drivers enabled.
 **Install Library provided by ESpressif:**
 - LVGL 
 
-- GC9a01
+- [ESP LCD Touch CST816S Controller](https://components.espressif.com/components/espressif/esp_lcd_touch_cst816s)
+    - ESP-IDF Terminal: ```idf.py add-dependency "espressif/esp_lcd_touch_cst816s^1.0.3~1"```
 
-- CST816S
+- [ESP LCD Touch Component](https://components.espressif.com/components/espressif/esp_lcd_touch)
+    - ESP-IDF Terminal: ```idf.py add-dependency "espressif/esp_lcd_touch^1.1.2"```
+      
+- [ESP LCD GC9A01](https://components.espressif.com/components/espressif/esp_lcd_gc9a01)
+    - ESP-IDF Terminal: ```idf.py add-dependency "espressif/esp_lcd_gc9a01^2.0.0"```
 
 **Install other Library:**
 - [Arduino as an ESP-IDF component](https://docs.espressif.com/projects/arduino-esp32/en/latest/esp-idf_component.html)
