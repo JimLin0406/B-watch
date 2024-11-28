@@ -1,7 +1,6 @@
 # B-Watch using ESP-IDF
 
-This project demonstrates how to interface the CST816S capacitive touch controller on GC9A01 TFT-LCD with ESP-S3 using the ESP-IDF framework.
-並用於開發檢測滲血傷口感測器Blood Monitor Watch
+This project demonstrates how to interface the CST816S capacitive touch controller with the GC9A01 TFT-LCD using the ESP32-S3 and the ESP-IDF framework. It is designed for developing a **Blood Monitor Watch** to detect bleeding wounds.
 
 ## Requirements
 ### Hardware
@@ -11,7 +10,8 @@ This project demonstrates how to interface the CST816S capacitive touch controll
     - CST816S touch controller module
 - Sensor PCB (from NCKU WTMH LAB)
     - PCB材料清單
-    - 
+    -
+
 ### Sofrware
 - VS code IDE
 - ESP32-IDF (version 5.15.5)
@@ -33,62 +33,79 @@ This project demonstrates how to interface the CST816S capacitive touch controll
 | **Touch SDA**       | GPIO 18           | -            | SDA          |
 | **Touch SCL**       | GPIO 19           | -            | SCL          |
 
-**Note:** Some GPIOs are not corrected from Waveshare's website....
+**Note:** Some GPIO configurations from Waveshare's website may not be accurate. Verify your connections manually for correctness.
 
-## Software Configuration
+## Software Configuration  
 Ensure that your `sdkconfig` has the necessary I2C drivers enabled.
 
-**Install ESP-IDF on VScode IDE**
-[ESP-IDF Extension for VS Code](https://github.com/espressif/vscode-esp-idf-extension)
+### Installing ESP-IDF in VS Code  
+Use the [ESP-IDF Extension for VS Code](https://github.com/espressif/vscode-esp-idf-extension) to set up your development environment.
+
+### Installing Libraries Provided by Espressif  
+
+1. **LVGL - Light and Versatile Graphics Library**  
+   - Add via ESP-IDF Terminal:  
+     ```bash  
+     idf.py add-dependency "lvgl/lvgl^8.3.11"  
+     ```  
+
+2. **ESP LCD Touch CST816S Controller**  
+   - Add via ESP-IDF Terminal:  
+     ```bash  
+     idf.py add-dependency "espressif/esp_lcd_touch_cst816s^1.0.3~1"  
+     ```  
+
+3. **ESP LCD Touch Component**  
+   - Add via ESP-IDF Terminal:  
+     ```bash  
+     idf.py add-dependency "espressif/esp_lcd_touch^1.1.2"  
+     ```  
+
+4. **ESP LCD GC9A01**  
+   - Add via ESP-IDF Terminal:  
+     ```bash  
+     idf.py add-dependency "espressif/esp_lcd_gc9a01^2.0.0"  
+     ```  
+
+### Installing Additional Libraries  
+
+1. **Arduino as an ESP-IDF Component**  
+   - Open the ESP-IDF project in VS Code.  
+   - Press `F1`, then select:  
+     ```Add Arduino ESP32 as ESP-IDF Component```  
+   - Modify `sdkconfig` as follows:  
+     ```c  
+     CONFIG_FREERTOS_HZ=1000  
+     ```  
+
+2. **Adafruit_ADS1X15**  
+   - Copy the library to `/esp-project/components`.  
+   - Create a `CMakeLists.txt` file in `/esp-project/components/` with the following content:  
+     ```cmake  
+     idf_component_register(SRCS "Adafruit_ADS1X15.cpp"  
+                           INCLUDE_DIRS "."  
+                           REQUIRES arduino Adafruit_BusIO)  
+     ```  
+
+3. **Adafruit_TCS34725**  
+   - Follow the same process as **Adafruit_ADS1X15**.  
+
+4. **Adafruit_BusIO**  
+   - Follow the same process as **Adafruit_ADS1X15**.  
 
 
-**Install Library provided by ESpressif:**
-- [LVGL - Light and Versatile Graphics Library](https://components.espressif.com/components/lvgl/lvgl/versions/8.3.11?language=en)
-    - ESP-IDF Terminal: ```idf.py add-dependency "lvgl/lvgl^8.3.11"```
-
-- [ESP LCD Touch CST816S Controller](https://components.espressif.com/components/espressif/esp_lcd_touch_cst816s)
-    - ESP-IDF Terminal: ```idf.py add-dependency "espressif/esp_lcd_touch_cst816s^1.0.3~1"```
-
-- [ESP LCD Touch Component](https://components.espressif.com/components/espressif/esp_lcd_touch)
-    - ESP-IDF Terminal: ```idf.py add-dependency "espressif/esp_lcd_touch^1.1.2"```
-      
-- [ESP LCD GC9A01](https://components.espressif.com/components/espressif/esp_lcd_gc9a01)
-    - ESP-IDF Terminal: ```idf.py add-dependency "espressif/esp_lcd_gc9a01^2.0.0"```
-
-**Install other Library:**
-- [Arduino as an ESP-IDF component](https://docs.espressif.com/projects/arduino-esp32/en/latest/esp-idf_component.html)
-    - After build a IDF project and open it
-    - Press "F1" on VScode, then choose ```Add Arduino ESP32 as ESP-IDF Component```
-    - Modify sdkconfig: ~~CONFIG_FREERTOS_HZ=1000~~ to ```CONFIG_FREERTOS_HZ=1000```
-      
-- Adafruit_ADS1X15
-    - Copy library to /esp-project/components
-    - Add CMakeList.txt in /esp-project/components/
-```
-/* CMakeList.txt */
-idf_component_register(SRCS "Adafruit_ADS1X15.cpp"
-                      INCLUDE_DIRS "."
-                      REQUIRES arduino Adafruit_BusIO
-                      )
-```
-  
-- Adafruit_TCS34725
-    - same as above
-
-- Adafruit_BusIO
-    - same as above
-    - 
-**Partition Scheme**
-- Open SDK Configuration Editor (menuconfig)
-- Chooese **Partition Table** and import partition.csv in the path of main project
-- Check sdkconfig as same as below:
+## Partition Scheme  
+1. Open the SDK Configuration Editor (`menuconfig`).  
+2. Select **Partition Table** and import the `partitions.csv` file from your project's main directory.  
+3. Verify that the following settings are in `sdkconfig`:  
 ```
 CONFIG_PARTITION_TABLE_CUSTOM=y
 CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="partitions.csv"
 ```
-
   
-**Note:** Your ESP-IDF version is limited in >=5.1 and <=5.2
+**Note:** Ensure that your ESP-IDF version is between `5.1` and `5.2`.  
+
+
 
 
 
