@@ -6,7 +6,7 @@ This project demonstrates how to interface the CST816S capacitive touch controll
 ### Hardware
 - [ESP32-S3 LCD ESP32-S3-Touch-LCD-1.28](https://www.waveshare.com/esp32-s3-touch-lcd-1.28.htm)
     - ESP32-S3 development board
-    - GC9A01 TFT-LCD 
+    - GC9A01 TFT-LCD
     - CST816S touch controller module
 - Sensor PCB (from NCKU WTMH LAB)
     - PCB材料清單
@@ -15,7 +15,7 @@ This project demonstrates how to interface the CST816S capacitive touch controll
 ### Sofrware
 - VS code IDE
 - ESP32-IDF (version 5.15.5)
-- LVGL library
+- LVGL library (version 8.3.11)
 - 
 
 ## Hardware Setup
