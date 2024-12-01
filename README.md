@@ -145,6 +145,10 @@ https://www.cnblogs.com/yinsua/p/18202710
 
 https://github.com/espressif/esp-bsp/tree/master/components/lcd_touch/esp_lcd_touch_cst816s
 
+## Reference
+https://github.com/espressif/esp-idf/blob/master/examples/peripherals/lcd/spi_lcd_touch/main/spi_lcd_touch_example_main.c
+
+
 
 
 
