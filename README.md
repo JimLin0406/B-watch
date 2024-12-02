@@ -125,7 +125,8 @@ qwewqeas
 
 
 ## Troubleshooting
-### 螢幕pixel random initialization
+### Initialize LCD pixel with random values
+
 
 ### ESP-IDF Monitor
 Error loop about [I2C Read Failed (IDFGH-11933) #13013](https://github.com/espressif/esp-idf/issues/13013)
