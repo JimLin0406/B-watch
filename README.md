@@ -65,8 +65,15 @@ Use the [ESP-IDF Extension for VS Code](https://github.com/espressif/vscode-esp-
    - Add via ESP-IDF Terminal:  
      ```bash  
      idf.py add-dependency "espressif/esp_lcd_gc9a01^2.0.0"  
-     ```  
-
+     ```
+     
+5. **Component: Button**
+   - Used to control esp32 turn into/ wakeup from deep sleep mode.
+   - Add via ESP-IDF Terminal:  
+     ```bash  
+     idf.py add-dependency "espressif/button^3.4.0"
+     ```
+     
 ### Installing Additional Libraries  
 
 1. **Arduino as an ESP-IDF Component**  
