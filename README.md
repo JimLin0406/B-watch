@@ -2,7 +2,7 @@
 
 This project demonstrates how to interface the CST816S capacitive touch controller with the GC9A01 TFT-LCD using the ESP32-S3 and the ESP-IDF framework. It is designed for developing a **Blood Monitor Watch** to detect bleeding wounds.
 
-<img src="./figures/bwatch.png" width="30%">
+<img src="./figures/bwatch.png" width="50%">
 
 ## Requirements
 ### Hardware
