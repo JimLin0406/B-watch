@@ -16,7 +16,7 @@ This project demonstrates how to interface the CST816S capacitive touch controll
 
 ### Sofrware
 - VS code IDE
-- ESP32-IDF (version 5.15.5)
+- ESP32-IDF (version 5.1.5)
 - LVGL library (version 8.3.11)
   
 
