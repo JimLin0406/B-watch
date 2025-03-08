@@ -12,13 +12,13 @@ This project demonstrates how to interface the CST816S capacitive touch controll
     - CST816S touch controller module
 - Sensor PCB (from NCKU WTMH LAB)
     - PCB材料清單
-    -
+    
 
 ### Sofrware
 - VS code IDE
 - ESP32-IDF (version 5.15.5)
 - LVGL library (version 8.3.11)
-- 
+  
 
 ## Hardware Setup
 
