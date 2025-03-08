@@ -124,13 +124,13 @@ CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="partitions.csv"
 
 ## Code Overview
 ### I2C Initialization
-123test
+to be add....
 
 ### SPI Initialization
-asdtwst
+to be add....
 
 ### LVGL Touch Integration
-qwewqeas
+to be add....
 
 
 ## Troubleshooting
