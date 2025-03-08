@@ -11,7 +11,7 @@ This project demonstrates how to interface the CST816S capacitive touch controll
     - GC9A01 TFT-LCD
     - CST816S touch controller module
 - Sensor PCB (from NCKU WTMH LAB)
-    - PCB材料清單
+    - PCB List (to be update...)
     
 
 ### Sofrware
